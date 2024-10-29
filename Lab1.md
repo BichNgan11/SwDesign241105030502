@@ -88,8 +88,7 @@ PaymentRepository
 
 **4. Phân tích ca sử dụng Maintain Timecard**
 
-![Diagram]
-(https://www.planttext.com/api/plantuml/png/R9112eD034NtSufSe1UOHH5AATtMqlrK8mHc9fA9WcTpqIFr2bNQiOBkmiz__9-ynrUHr8bsmHjNAGkSG-jvG3HvWCCHxXImSbAVEAgmzoWMokuPI9ULsNhMP8dIKuKM7ivJxHItuCyoKpdxXYqdcceD5YweYmxNsF0UcAKrMBf-9-tlM0TQcEet9641ldUcH1nDWR6UFsK-0000__y30000)
+![Diagram](https://www.planttext.com/api/plantuml/png/R9112eD034NtSufSe1UOHH5AATtMqlrK8mHc9fA9WcTpqIFr2bNQiOBkmiz__9-ynrUHr8bsmHjNAGkSG-jvG3HvWCCHxXImSbAVEAgmzoWMokuPI9ULsNhMP8dIKuKM7ivJxHItuCyoKpdxXYqdcceD5YweYmxNsF0UcAKrMBf-9-tlM0TQcEet9641ldUcH1nDWR6UFsK-0000__y30000)
 
 **-Các lớp phân tích và biểu đồ sequence**
 
