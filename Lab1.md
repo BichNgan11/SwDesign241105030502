@@ -16,11 +16,11 @@ Bảo mật tốt hơn: Giúp bảo vệ dữ liệu và nghiệp vụ khi chỉ
 
 **-Ý nghĩa từng thành phần trong kiến trúc:**
 
-**-Presentation Layer (Lớp trình bày):**
+**Presentation Layer (Lớp trình bày):**
 
 Employee Interface: Giao diện người dùng cho phép nhập thông tin thời gian làm việc (Timecards), đơn hàng (Purchase Orders), và tùy chọn thanh toán (Preferences). Lớp này chịu trách nhiệm hiển thị thông tin và nhận đầu vào từ người dùng.
 
-**-Business Logic Layer (Lớp logic nghiệp vụ):**
+**Business Logic Layer (Lớp logic nghiệp vụ):**
 
 Payment Service: Xử lý các tác vụ tính toán và xử lý thanh toán cho nhân viên.
 
@@ -28,7 +28,7 @@ Timecard Service: Quản lý việc nộp và xác nhận thông tin thời gian
 
 Purchase Order Service: Xử lý việc ghi nhận và xác nhận thông tin về các đơn hàng mà nhân viên bán hàng ghi nhận.
 
-**-Data Access Layer (Lớp truy cập dữ liệu):**
+**Data Access Layer (Lớp truy cập dữ liệu):**
 
 Payment Repository: Truy cập và cập nhật cơ sở dữ liệu liên quan đến thanh toán.
 
@@ -69,3 +69,33 @@ Lý do: Sử dụng bộ nhớ đệm để cải thiện hiệu suất hệ th�
 Tích hợp hệ thống cũ (Legacy System Integration):
 
 Lý do: Đảm bảo hệ thống mới hoạt động mượt mà với cơ sở dữ liệu quản lý dự án hiện có.
+
+**3. Phân tích ca sử dụng Payment**
+![Diagram]
+(https://www.planttext.com/api/plantuml/png/T9112i9034NtSufSm0lCGWeYua8eYWSOfhzOc9cKJ1HwDXSUoIlOGgj5xIxy_9Vyv7b_55cTw3K6uxooq3QsWJl0J0MjrbIwBYBfXfCAXm2nT4A0rwb31-Y5A_DZdD4doAtni5GAU-Iym8ws0PmY7D5oRlfqdQKTzAtJFjNyXnkLENPkAwTOMFanphTQwi-e6ubVr3ZB54ZLyBSN0000__y30000)
+**-Các lớp phân tích và biểu đồ sequence**
+
+**Các lớp phân tích:**
+
+PaymentController
+
+PaymentService
+
+EmployeeRepository
+
+PaymentRepository
+
+**4. Phân tích ca sử dụng Maintain Timecard**
+![Diagram]
+(https://www.planttext.com/api/plantuml/png/R9112eD034NtSufSe1UOHH5AATtMqlrK8mHc9fA9WcTpqIFr2bNQiOBkmiz__9-ynrUHr8bsmHjNAGkSG-jvG3HvWCCHxXImSbAVEAgmzoWMokuPI9ULsNhMP8dIKuKM7ivJxHItuCyoKpdxXYqdcceD5YweYmxNsF0UcAKrMBf-9-tlM0TQcEet9641ldUcH1nDWR6UFsK-0000__y30000)
+**-Các lớp phân tích và biểu đồ sequence**
+
+**Các lớp phân tích:**
+
+PaymentController
+
+PaymentService
+
+EmployeeRepository
+
+PaymentRepository
