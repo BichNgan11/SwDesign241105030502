@@ -47,3 +47,25 @@ Purchase Orders DB: Lưu trữ thông tin về các đơn hàng mà nhân viên 
 Legacy Project Management DB (DB2): Cơ sở dữ liệu quản lý dự án hiện có, lưu trữ thông tin về dự án và số liệu tính phí, không thay đổi.
 
 **2. Cơ chế phân tích**
+
+-**Các cơ chế cần giải quyết trong bài toán**
+
+Xác thực và ủy quyền (Authentication & Authorization):
+
+Lý do: Đảm bảo chỉ có nhân viên hợp lệ mới được truy cập hệ thống và bảo mật thông tin cá nhân.
+
+Quản lý giao dịch (Transaction Management):
+
+Lý do: Đảm bảo tính toàn vẹn của dữ liệu khi thực hiện các giao dịch.
+
+Xử lý lỗi (Error Handling):
+
+Lý do: Xác định cơ chế xử lý lỗi và thông báo lỗi cho người dùng.
+
+Caching:
+
+Lý do: Sử dụng bộ nhớ đệm để cải thiện hiệu suất hệ thống.
+
+Tích hợp hệ thống cũ (Legacy System Integration):
+
+Lý do: Đảm bảo hệ thống mới hoạt động mượt mà với cơ sở dữ liệu quản lý dự án hiện có.
