@@ -7,8 +7,11 @@
 **Lý do lựa chọn:**
 
 -Tính tách biệt rõ ràng: Mỗi lớp có nhiệm vụ riêng, giúp dễ dàng bảo trì và phát triển.
+
 -Khả năng mở rộng: Dễ dàng thêm mới hoặc sửa đổi các thành phần mà không ảnh hưởng đến toàn hệ thống.
+
 -Tính tái sử dụng: Các thành phần có thể được tái sử dụng trong các module khác của hệ thống.
+
 -Bảo mật tốt hơn: Giúp bảo vệ dữ liệu và nghiệp vụ khi chỉ cho phép truy cập qua các lớp được xác định trước.
 
 **Ý nghĩa từng thành phần trong kiến trúc:**
