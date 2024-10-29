@@ -93,17 +93,25 @@ PaymentRepository
 
 ![Diagram](https://www.planttext.com/api/plantuml/png/b5F1JiCm3BttAwoTG68_a0CQ30uxm84DSVPIgukMDbMSJgeGNyQ1J-8NI4lNfMt6HAJsuFVy_6mdtvzV2tPeNPNhf4IvnunWzeIgSFw3ZSf9eatXbGcMo3I3zmJyaHgPUtXf2cUDrcGxk3bpS1sy9djGaaJFxm8z5O2hRQxS4R-wRg6F95AhonqKehpKfYPweTAmSiRM0XudiOYpC64pYGN-3gXLYexkYdID1-gD7YklKW5-PZUzyaalqilKMz0EG4RkoBYlLvCYVmpdZ227bl_bS31czLi_Y1IO-xMkdLL5TjxL1P5HUm7IJ5p0W_y7mPsfBByPkoVFJqsrrI4gTsWpUgxoBTcHC-yjSc7djvEh9Q1YucGSzip8uWIWbCHd4YAB4UqwE8be1HKyJPhs4PvqXyn-kW5pGKNQlEJs_0000F__0m00)
 
+**Giải thích**
 
+PaymentController: Điều khiển việc chọn phương thức thanh toán, sử dụng PaymentService để xử lý logic nghiệp vụ.
+
+PaymentService: Xử lý nghiệp vụ liên quan đến việc chọn phương thức thanh toán, truy cập EmployeeRepository để lấy thông tin nhân viên và PaymentRepository để cập nhật phương thức thanh toán.
+
+EmployeeRepository: Cung cấp các phương thức để truy cập thông tin nhân viên từ cơ sở dữ liệu.
+
+PaymentRepository: Cung cấp các phương thức để cập nhật phương thức thanh toán của nhân viên trong cơ sở dữ liệu.
+
+Employee: Lớp đại diện cho nhân viên, bao gồm các thuộc tính như id, name và paymentMethod.
+
+PaymentMethod: Enum để định nghĩa các phương thức thanh toán (PICK_UP, MAIL, DIRECT_DEPOSIT).
 
 **4. Phân tích ca sử dụng Maintain Timecard**
 
 **-Biểu đồ sequence**
 
 ![Diagram](https://www.planttext.com/api/plantuml/png/R9112eD034NtSufSe1UOHH5AATtMqlrK8mHc9fA9WcTpqIFr2bNQiOBkmiz__9-ynrUHr8bsmHjNAGkSG-jvG3HvWCCHxXImSbAVEAgmzoWMokuPI9ULsNhMP8dIKuKM7ivJxHItuCyoKpdxXYqdcceD5YweYmxNsF0UcAKrMBf-9-tlM0TQcEet9641ldUcH1nDWR6UFsK-0000__y30000)
-
-**-Các lớp phân tích và biểu đồ sequence**
-
-![Diagram](https://www.planttext.com/api/plantuml/png/h5DBReCm4DrpYb5MhTHSW4MLbcI1MbGKadLacH55nH_PfXAgUh8kUgHUeH0CCXXscTtCFDvxdXd-VdvtsX1bQbO5aj0FKY1iKj8mv0RE6Y4Y6ZVm5K0Rj29QW-r6WXibgWgLxNQn1TbtCrIV9SLmGDjy109eh90QsqxGl8lyxlxQ_mvyDVlzH0gPh4I3U4GfT6c4Qa8uU3NVcujFvoN7eLI2ejPJYuDed8TGSlC0x5eVcNhOmaDyPyvZ00eq0-AvYJsTzSciyDKo9mPlx7qo_h9dSIgSi7RZcL4bB_on9qjYhXRocasxZbuQHo-NSphcoLFyEYRx-7Y8JfVz8NtBufFbR5dzKzq-pYygX5gZ3cRL5hUmi108xKvY4U_l8xHRqC42bwFG0cbhaPHyv5q53emxv7dtqtRn3m00__y30000)
 
 **Các lớp phân tích:**
 
@@ -114,3 +122,21 @@ PaymentService
 EmployeeRepository
 
 PaymentRepository
+
+**-Các lớp phân tích và biểu đồ sequence**
+
+![Diagram](https://www.planttext.com/api/plantuml/png/h5DBReCm4DrpYb5MhTHSW4MLbcI1MbGKadLacH55nH_PfXAgUh8kUgHUeH0CCXXscTtCFDvxdXd-VdvtsX1bQbO5aj0FKY1iKj8mv0RE6Y4Y6ZVm5K0Rj29QW-r6WXibgWgLxNQn1TbtCrIV9SLmGDjy109eh90QsqxGl8lyxlxQ_mvyDVlzH0gPh4I3U4GfT6c4Qa8uU3NVcujFvoN7eLI2ejPJYuDed8TGSlC0x5eVcNhOmaDyPyvZ00eq0-AvYJsTzSciyDKo9mPlx7qo_h9dSIgSi7RZcL4bB_on9qjYhXRocasxZbuQHo-NSphcoLFyEYRx-7Y8JfVz8NtBufFbR5dzKzq-pYygX5gZ3cRL5hUmi108xKvY4U_l8xHRqC42bwFG0cbhaPHyv5q53emxv7dtqtRn3m00__y30000)
+
+**Giải thích**
+
+TimecardController: Điều khiển việc nộp thông tin thời gian làm việc, sử dụng TimecardService để xử lý logic nghiệp vụ.
+
+TimecardService: Xử lý nghiệp vụ liên quan đến việc nộp thông tin thời gian làm việc, truy cập EmployeeRepository để lấy thông tin nhân viên và TimecardRepository để lưu thông tin thời gian làm việc.
+
+EmployeeRepository: Cung cấp các phương thức để truy cập thông tin nhân viên từ cơ sở dữ liệu.
+
+TimecardRepository: Cung cấp các phương thức để lưu thông tin thời gian làm việc vào cơ sở dữ liệu.
+
+Employee: Lớp đại diện cho nhân viên, bao gồm các thuộc tính như id và name.
+
+Timecard: Lớp đại diện cho thông tin thời gian làm việc, bao gồm các thuộc tính như id, employeeId, date, hoursWorked và chargeNumber.
