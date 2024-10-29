@@ -73,7 +73,7 @@ Lý do: Đảm bảo hệ thống mới hoạt động mượt mà với cơ s�
 **3. Phân tích ca sử dụng Payment**
 
 ![Diagram]
-(https://www.planttext.com/api/plantuml/png/T9112i9034NtSufSm0lCGWeYua8eYWSOfhzOc9cKJ1HwDXSUoIlOGgj5xIxy_9Vyv7b_55cTw3K6uxooq3QsWJl0J0MjrbIwBYBfXfCAXm2nT4A0rwb31-Y5A_DZdD4doAtni5GAU-Iym8ws0PmY7D5oRlfqdQKTzAtJFjNyXnkLENPkAwTOMFanphTQwi-e6ubVr3ZB54ZLyBSN0000__y30000)
+(https://www.planttext.com/api/plantuml/png/T9112i9034NtSufSm0lCGWeYua8eYWSOfhzOc9cKJ1HwDXSUoIlOGgj5RLOX-Iy_oVF-AB8wqMiCndbbeMri0tU0cH9QhQbqNKJI3ISL3W5YwOG0hrE73j0BL-P7EADFa5lZOQaKziXvWHrb0pYjS4JBkUctwopjeEywxLFDVxYnCiVERUKK2vOVuTpLKdz6tKZyeiPPfa2gXh_ryG800F__0m00)
 
 **-Các lớp phân tích và biểu đồ sequence**
 
