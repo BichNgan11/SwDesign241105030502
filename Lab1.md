@@ -79,8 +79,6 @@ Lý do: Đảm bảo hệ thống mới hoạt động mượt mà với cơ s�
 
 ![Diagram](https://www.planttext.com/api/plantuml/png/T9112i9034NtSufSm0lCGWeYua8eYWSOfhzOc9cKJ1HwDXSUoIlOGgj5RLOX-Iy_oVF-AB8wqMiCndbbeMri0tU0cH9QhQbqNKJI3ISL3W5YwOG0hrE73j0BL-P7EADFa5lZOQaKziXvWHrb0pYjS4JBkUctwopjeEywxLFDVxYnCiVERUKK2vOVuTpLKdz6tKZyeiPPfa2gXh_ryG800F__0m00)
 
-**-Các lớp phân tích và biểu đồ sequence**
-
 **Các lớp phân tích:**
 
 PaymentController
@@ -93,6 +91,11 @@ PaymentRepository
 
 **Biểu đồ lớp mô tả lớp phân tích**
 
+![Diagram]
+(https://www.planttext.com/api/plantuml/png/b5F1JiCm3BttAwoTG68_a0CQ30uxm84DSVPIgukMDbMSJgeGNyQ1J-8NI4lNfMt6HAJsuFVy_6mdtvzV2tPeNPNhf4IvnunWzeIgSFw3ZSf9eatXbGcMo3I3zmJyaHgPUtXf2cUDrcGxk3bpS1sy9djGaaJFxm8z5O2hRQxS4R-wRg6F95AhonqKehpKfYPweTAmSiRM0XudiOYpC64pYGN-3gXLYexkYdID1-gD7YklKW5-PZUzyaalqilKMz0EG4RkoBYlLvCYVmpdZ227bl_bS31czLi_Y1IO-xMkdLL5TjxL1P5HUm7IJ5p0W_y7mPsfBByPkoVFJqsrrI4gTsWpUgxoBTcHC-yjSc7djvEh9Q1YucGSzip8uWIWbCHd4YAB4UqwE8be1HKyJPhs4PvqXyn-kW5pGKNQlEJs_0000F__0m00)
+
+
+
 **4. Phân tích ca sử dụng Maintain Timecard**
 
 **-Biểu đồ sequence**
@@ -100,6 +103,9 @@ PaymentRepository
 ![Diagram](https://www.planttext.com/api/plantuml/png/R9112eD034NtSufSe1UOHH5AATtMqlrK8mHc9fA9WcTpqIFr2bNQiOBkmiz__9-ynrUHr8bsmHjNAGkSG-jvG3HvWCCHxXImSbAVEAgmzoWMokuPI9ULsNhMP8dIKuKM7ivJxHItuCyoKpdxXYqdcceD5YweYmxNsF0UcAKrMBf-9-tlM0TQcEet9641ldUcH1nDWR6UFsK-0000__y30000)
 
 **-Các lớp phân tích và biểu đồ sequence**
+
+![Diagram]
+(https://www.planttext.com/api/plantuml/png/h5DBReCm4DrpYb5MhTHSW4MLbcI1MbGKadLacH55nH_PfXAgUh8kUgHUeH0CCXXscTtCFDvxdXd-VdvtsX1bQbO5aj0FKY1iKj8mv0RE6Y4Y6ZVm5K0Rj29QW-r6WXibgWgLxNQn1TbtCrIV9SLmGDjy109eh90QsqxGl8lyxlxQ_mvyDVlzH0gPh4I3U4GfT6c4Qa8uU3NVcujFvoN7eLI2ejPJYuDed8TGSlC0x5eVcNhOmaDyPyvZ00eq0-AvYJsTzSciyDKo9mPlx7qo_h9dSIgSi7RZcL4bB_on9qjYhXRocasxZbuQHo-NSphcoLFyEYRx-7Y8JfVz8NtBufFbR5dzKzq-pYygX5gZ3cRL5hUmi108xKvY4U_l8xHRqC42bwFG0cbhaPHyv5q53emxv7dtqtRn3m00__y30000)
 
 **Các lớp phân tích:**
 
