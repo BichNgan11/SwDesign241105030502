@@ -230,3 +230,45 @@ TimecardRepository: Cung cấp các phương thức để lưu thông tin thời
 Employee: Lớp đại diện cho nhân viên, bao gồm các thuộc tính như id và name.
 
 Timecard: Lớp đại diện cho thông tin thời gian làm việc, bao gồm các thuộc tính như id, employeeId, date, hoursWorked và chargeNumber.
+
+**5. Hợp nhất kết quả phân tích**
+
+**Hợp nhất kết quả phân tích của hai ca sử dụng: Select Payment và Maintain Timecard**
+
+**-Phân tích lớp**
+
+**Employee:**
+
+Thuộc tính: EmployeeID, Name, Address, PaymentMethod
+
+Phương thức: UpdatePaymentMethod(), EnterTimecard()
+
+**PaymentMethod:**
+
+Thuộc tính: MethodType
+
+Phương thức: N/A
+
+**PaymentProcessor:**
+
+Phương thức: ValidatePaymentMethod(), UpdatePaymentDetails()
+
+**Timecard:**
+
+Thuộc tính: Date, HoursWorked, ChargeNumber
+
+Phương thức: N/A
+
+**TimecardProcessor:**
+
+Phương thức: ValidateTimecardEntry(), UpdateTimecard()
+
+**-Biểu đồ sequence hợp nhất**
+
+![Diagram]
+(https://www.planttext.com/api/plantuml/png/X95D3e8m48NtFKMNkl02B0mBMBWm8V5dFxPZ92aj6OO5PtFXaRo2HQG8IDmrVM_UbpVpl3_YYe6uBem0nOvaMfJ6DOX2N5njDL0ZTvQHhg3ydtAMoHcPGLEWvOoSmgfo58HZNg02qeCY-aIvsGvHaJoWGSLzajmZtvmMmT2wfvH8di7a6XW_IZUqMekfSy8QGqBANzof_88bo92RojEMAgNjCwn09i0m9iosCpJg9Pz1ZMVCh1DMeBm7bYhz07QTUi6JOhIwlVyB003__mC0)
+
+**-Biểu đồ lớp hợp nhất**
+
+![Diagram]
+(https://www.planttext.com/api/plantuml/png/T5113e8m4Bpt5JtgWI-O627HWyG3whdIZH1RIhRbq1XVvi4d-GMnGAKIRZkpivtfl9-lN32jQI9heIm0lHDA8mztiOCfa-26DUS8MhlvmAo4okp158gt3AN7cZC30RzOkarI6S2ib90p_78FGZhVGDoRTo2pDKnq1rHvww_GIIazCL7EUGPfOZ2i57fiFSJfNUDMx8QjQb2V5Tw0Exmf65uXRUG5S7ezbsZOjpz76oGAQ_35Hz7ghz9WDLmH7tlC-XGaB7Jqw4_o0G00__y30000)
