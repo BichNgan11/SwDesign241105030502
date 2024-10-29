@@ -71,8 +71,10 @@ Tích hợp hệ thống cũ (Legacy System Integration):
 Lý do: Đảm bảo hệ thống mới hoạt động mượt mà với cơ sở dữ liệu quản lý dự án hiện có.
 
 **3. Phân tích ca sử dụng Payment**
+
 ![Diagram]
 (https://www.planttext.com/api/plantuml/png/T9112i9034NtSufSm0lCGWeYua8eYWSOfhzOc9cKJ1HwDXSUoIlOGgj5xIxy_9Vyv7b_55cTw3K6uxooq3QsWJl0J0MjrbIwBYBfXfCAXm2nT4A0rwb31-Y5A_DZdD4doAtni5GAU-Iym8ws0PmY7D5oRlfqdQKTzAtJFjNyXnkLENPkAwTOMFanphTQwi-e6ubVr3ZB54ZLyBSN0000__y30000)
+
 **-Các lớp phân tích và biểu đồ sequence**
 
 **Các lớp phân tích:**
@@ -86,8 +88,10 @@ EmployeeRepository
 PaymentRepository
 
 **4. Phân tích ca sử dụng Maintain Timecard**
+
 ![Diagram]
 (https://www.planttext.com/api/plantuml/png/R9112eD034NtSufSe1UOHH5AATtMqlrK8mHc9fA9WcTpqIFr2bNQiOBkmiz__9-ynrUHr8bsmHjNAGkSG-jvG3HvWCCHxXImSbAVEAgmzoWMokuPI9ULsNhMP8dIKuKM7ivJxHItuCyoKpdxXYqdcceD5YweYmxNsF0UcAKrMBf-9-tlM0TQcEet9641ldUcH1nDWR6UFsK-0000__y30000)
+
 **-Các lớp phân tích và biểu đồ sequence**
 
 **Các lớp phân tích:**
