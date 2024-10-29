@@ -79,21 +79,65 @@ Lý do: Đảm bảo hệ thống mới hoạt động mượt mà với cơ s�
 
 ![Diagram](https://www.planttext.com/api/plantuml/png/T9112i9034NtSufSm0lCGWeYua8eYWSOfhzOc9cKJ1HwDXSUoIlOGgj5RLOX-Iy_oVF-AB8wqMiCndbbeMri0tU0cH9QhQbqNKJI3ISL3W5YwOG0hrE73j0BL-P7EADFa5lZOQaKziXvWHrb0pYjS4JBkUctwopjeEywxLFDVxYnCiVERUKK2vOVuTpLKdz6tKZyeiPPfa2gXh_ryG800F__0m00)
 
-**Các lớp phân tích:**
+**-Các lớp phân tích:**
 
-PaymentController
+**PaymentController**
 
-PaymentService
+Nhiệm vụ: Điều khiển việc chọn phương thức thanh toán và giao tiếp với PaymentService để xử lý logic nghiệp vụ.
 
-EmployeeRepository
+Thuộc tính: paymentService: PaymentService
 
-PaymentRepository
+Phương thức: selectPaymentMethod()
+
+**PaymentService**
+
+Nhiệm vụ: Xử lý nghiệp vụ liên quan đến việc chọn phương thức thanh toán, truy cập EmployeeRepository để lấy thông tin nhân viên và PaymentRepository để cập nhật phương thức thanh toán.
+
+Thuộc tính:
+
+employeeRepository: EmployeeRepository
+
+paymentRepository: PaymentRepository
+
+Phương thức: processPaymentMethod(employeeId: int, method: PaymentMethod)
+
+**EmployeeRepository**
+
+Nhiệm vụ: Cung cấp các phương thức để truy cập thông tin nhân viên từ cơ sở dữ liệu.
+
+Phương thức: getEmployeeById(employeeId: int)
+
+**PaymentRepository**
+
+Nhiệm vụ: Cung cấp các phương thức để cập nhật phương thức thanh toán của nhân viên trong cơ sở dữ liệu.
+
+Phương thức: updatePaymentMethod(employeeId: int, method: PaymentMethod)
+
+**Employee**
+
+Thuộc tính:
+
+id: int
+
+name: String
+
+paymentMethod: PaymentMethod
+
+**PaymentMethod (Enum)**
+
+Giá trị:
+
+PICK_UP
+
+MAIL
+
+DIRECT_DEPOSIT
 
 **Biểu đồ lớp mô tả lớp phân tích**
 
 ![Diagram](https://www.planttext.com/api/plantuml/png/b5F1JiCm3BttAwoTG68_a0CQ30uxm84DSVPIgukMDbMSJgeGNyQ1J-8NI4lNfMt6HAJsuFVy_6mdtvzV2tPeNPNhf4IvnunWzeIgSFw3ZSf9eatXbGcMo3I3zmJyaHgPUtXf2cUDrcGxk3bpS1sy9djGaaJFxm8z5O2hRQxS4R-wRg6F95AhonqKehpKfYPweTAmSiRM0XudiOYpC64pYGN-3gXLYexkYdID1-gD7YklKW5-PZUzyaalqilKMz0EG4RkoBYlLvCYVmpdZ227bl_bS31czLi_Y1IO-xMkdLL5TjxL1P5HUm7IJ5p0W_y7mPsfBByPkoVFJqsrrI4gTsWpUgxoBTcHC-yjSc7djvEh9Q1YucGSzip8uWIWbCHd4YAB4UqwE8be1HKyJPhs4PvqXyn-kW5pGKNQlEJs_0000F__0m00)
 
-**Giải thích**
+**-Giải thích**
 
 PaymentController: Điều khiển việc chọn phương thức thanh toán, sử dụng PaymentService để xử lý logic nghiệp vụ.
 
@@ -115,13 +159,59 @@ PaymentMethod: Enum để định nghĩa các phương thức thanh toán (PICK_
 
 **Các lớp phân tích:**
 
-PaymentController
+**TimecardController**
 
-PaymentService
+Nhiệm vụ: Điều khiển việc nộp thông tin thời gian làm việc và giao tiếp với TimecardService để xử lý logic nghiệp vụ.
 
-EmployeeRepository
+Thuộc tính: timecardService: TimecardService
 
-PaymentRepository
+Phương thức: submitTimecard()
+
+**TimecardService**
+
+Nhiệm vụ: Xử lý nghiệp vụ liên quan đến việc nộp thông tin thời gian làm việc, truy cập EmployeeRepository để lấy thông tin nhân viên và TimecardRepository để lưu thông tin thời gian làm việc.
+
+Thuộc tính:
+
+employeeRepository: EmployeeRepository
+
+timecardRepository: TimecardRepository
+
+Phương thức: validateAndSaveTimecard(employeeId: int, timecard: Timecard)
+
+**EmployeeRepository**
+
+Nhiệm vụ: Cung cấp các phương thức để truy cập thông tin nhân viên từ cơ sở dữ liệu.
+
+Phương thức: getEmployeeById(employeeId: int)
+
+**TimecardRepository**
+
+Nhiệm vụ: Cung cấp các phương thức để lưu thông tin thời gian làm việc vào cơ sở dữ liệu.
+
+Phương thức: saveTimecard(timecard: Timecard)
+
+**Employee**
+
+Thuộc tính:
+
+id: int
+
+name: String
+
+**Timecard**
+
+Thuộc tính:
+
+id: int
+
+employeeId: int
+
+date: Date
+
+hoursWorked: double
+
+chargeNumber: String
 
 **-Các lớp phân tích và biểu đồ sequence**
 
