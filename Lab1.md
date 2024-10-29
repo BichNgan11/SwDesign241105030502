@@ -15,3 +15,6 @@ Tính tái sử dụng: Các thành phần có thể được tái sử dụng t
 Bảo mật tốt hơn: Giúp bảo vệ dữ liệu và nghiệp vụ khi chỉ cho phép truy cập qua các lớp được xác định trước.
 
 **-Ý nghĩa từng thành phần trong kiến trúc:**
+
+Payroll System là hệ thống chính, bao gồm tất cả các thành phần con.
+
