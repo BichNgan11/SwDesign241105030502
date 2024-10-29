@@ -3,6 +3,7 @@
 **PHÂN TÍCH KIẾN TRÚC, CƠ CHẾ, CA SỬ DỤNG**
 
 **1. Phân tích kiến trúc**
+**-Biểu đồ package mô tả kiến trúc.**
 ![Diagram](https://www.planttext.com/api/plantuml/png/j5HBJiCm4Dtx5AEksaKt702L41P8HLGji9ywqs9mx6ZiW2BKax7WI5m1frK_SHFQ1Sp22y_pcpSlC_d-_1evZ-pBN8i2vIik2NeJhDXg3RFAUSfxy24Wn3xDvCXuzCeQ66D5l8NK8JKw1xsRlD2s8e9RuuaNAEaGj8u7bPD4pbppUbAoV4P7SCyPSPnaMX2JaRHFhCJcRAfCIgSC1IbZkrIoKsVeDG_Dm8puJRM8l4OjIusU-eDOYGqYtC7rAkRUDjX9FYldkV8nynDgbJKh7b4tJUeiC2LfEJkxGEnXYXxXIigrZISCd59XdVAMgoCL6uPOnMDHQu0qESl2_w6FRFp38crMpkjA9nTcYmoOJZlShwXeWuAyDjIObYYhUevVI7guGnE4hZzbca0_JIu6krSh4TfftVjXPj_DyB9ZtKJ75kvU7G-OQ1kw1lx0HJ4YazM_hXy0003__mC0)
 **-Lý do lựa chọn:**
 
@@ -72,6 +73,8 @@ Lý do: Đảm bảo hệ thống mới hoạt động mượt mà với cơ s�
 
 **3. Phân tích ca sử dụng Payment**
 
+**-Biểu đồ sequence**
+
 ![Diagram](https://www.planttext.com/api/plantuml/png/T9112i9034NtSufSm0lCGWeYua8eYWSOfhzOc9cKJ1HwDXSUoIlOGgj5RLOX-Iy_oVF-AB8wqMiCndbbeMri0tU0cH9QhQbqNKJI3ISL3W5YwOG0hrE73j0BL-P7EADFa5lZOQaKziXvWHrb0pYjS4JBkUctwopjeEywxLFDVxYnCiVERUKK2vOVuTpLKdz6tKZyeiPPfa2gXh_ryG800F__0m00)
 
 **-Các lớp phân tích và biểu đồ sequence**
@@ -86,7 +89,11 @@ EmployeeRepository
 
 PaymentRepository
 
+**Biểu đồ lớp mô tả lớp phân tích**
+
 **4. Phân tích ca sử dụng Maintain Timecard**
+
+**-Biểu đồ sequence**
 
 ![Diagram](https://www.planttext.com/api/plantuml/png/R9112eD034NtSufSe1UOHH5AATtMqlrK8mHc9fA9WcTpqIFr2bNQiOBkmiz__9-ynrUHr8bsmHjNAGkSG-jvG3HvWCCHxXImSbAVEAgmzoWMokuPI9ULsNhMP8dIKuKM7ivJxHItuCyoKpdxXYqdcceD5YweYmxNsF0UcAKrMBf-9-tlM0TQcEet9641ldUcH1nDWR6UFsK-0000__y30000)
 
