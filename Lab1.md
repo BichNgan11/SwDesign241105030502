@@ -263,6 +263,8 @@ Giao diện cập nhật dữ liệu thẻ thời gian của nhân viên thông 
 
 **-Biểu đồ lớp hợp nhất**
 
+![Diagram](https://www.planttext.com/api/plantuml/png/T5113e8m4Bpt5JtgWI-O627HWyG3whdIZH1RIhRbq1XVvi4d-GMnGAKIRZkpivtfl9-lN32jQI9heIm0lHDA8mztiOCfa-26DUS8MhlvmAo4okp158gt3AN7cZC30RzOkarI6S2ib90p_78FGZhVGDoRTo2pDKnq1rHvww_GIIazCL7EUGPfOZ2i57fiFSJfNUDMx8QjQb2V5Tw0Exmf65uXRUG5S7ezbsZOjpz76oGAQ_35Hz7ghz9WDLmH7tlC-XGaB7Jqw4_o0G00__y30000)
+
 **Mô Tả Các Thành Phần**
 
 **Employee (Nhân viên):**
@@ -324,5 +326,3 @@ Employee có quan hệ với Timecard: Nhân viên có thể nhập dữ liệu 
 PaymentMethod liên kết với PaymentProcessor: Phương thức thanh toán được xác thực và cập nhật thông qua bộ xử lý thanh toán.
 
 Timecard liên kết với TimecardProcessor: Thẻ thời gian được xác thực và cập nhật thông qua bộ xử lý thẻ thời gian.
-
-![Diagram](https://www.planttext.com/api/plantuml/png/T5113e8m4Bpt5JtgWI-O627HWyG3whdIZH1RIhRbq1XVvi4d-GMnGAKIRZkpivtfl9-lN32jQI9heIm0lHDA8mztiOCfa-26DUS8MhlvmAo4okp158gt3AN7cZC30RzOkarI6S2ib90p_78FGZhVGDoRTo2pDKnq1rHvww_GIIazCL7EUGPfOZ2i57fiFSJfNUDMx8QjQb2V5Tw0Exmf65uXRUG5S7ezbsZOjpz76oGAQ_35Hz7ghz9WDLmH7tlC-XGaB7Jqw4_o0G00__y30000)
