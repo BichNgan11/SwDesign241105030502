@@ -235,40 +235,94 @@ Timecard: Lớp đại diện cho thông tin thời gian làm việc, bao gồm 
 
 **Hợp nhất kết quả phân tích của hai ca sử dụng: Select Payment và Maintain Timecard**
 
-**-Phân tích lớp**
-
-**Employee:**
-
-Thuộc tính: EmployeeID, Name, Address, PaymentMethod
-
-Phương thức: UpdatePaymentMethod(), EnterTimecard()
-
-**PaymentMethod:**
-
-Thuộc tính: MethodType
-
-Phương thức: N/A
-
-**PaymentProcessor:**
-
-Phương thức: ValidatePaymentMethod(), UpdatePaymentDetails()
-
-**Timecard:**
-
-Thuộc tính: Date, HoursWorked, ChargeNumber
-
-Phương thức: N/A
-
-**TimecardProcessor:**
-
-Phương thức: ValidateTimecardEntry(), UpdateTimecard()
-
 **-Biểu đồ sequence hợp nhất**
 
-![Diagram]
-(https://www.planttext.com/api/plantuml/png/X95D3e8m48NtFKMNkl02B0mBMBWm8V5dFxPZ92aj6OO5PtFXaRo2HQG8IDmrVM_UbpVpl3_YYe6uBem0nOvaMfJ6DOX2N5njDL0ZTvQHhg3ydtAMoHcPGLEWvOoSmgfo58HZNg02qeCY-aIvsGvHaJoWGSLzajmZtvmMmT2wfvH8di7a6XW_IZUqMekfSy8QGqBANzof_88bo92RojEMAgNjCwn09i0m9iosCpJg9Pz1ZMVCh1DMeBm7bYhz07QTUi6JOhIwlVyB003__mC0)
+![Diagram](https://www.planttext.com/api/plantuml/png/X95D3e8m48NtFKMNkl02B0mBMBWm8V5dFxPZ92aj6OO5PtFXaRo2HQG8IDmrVM_UbpVpl3_YYe6uBem0nOvaMfJ6DOX2N5njDL0ZTvQHhg3ydtAMoHcPGLEWvOoSmgfo58HZNg02qeCY-aIvsGvHaJoWGSLzajmZtvmMmT2wfvH8di7a6XW_IZUqMekfSy8QGqBANzof_88bo92RojEMAgNjCwn09i0m9iosCpJg9Pz1ZMVCh1DMeBm7bYhz07QTUi6JOhIwlVyB003__mC0)
+
+**-Biểu đồ này thể hiện hai ca sử dụng chính:**
+
+**Select Payment:**
+
+Nhân viên chọn phương thức thanh toán qua giao diện.
+
+Giao diện gửi yêu cầu xác thực phương thức thanh toán đến PaymentProcessor.
+
+PaymentProcessor xác thực phương thức thanh toán và gửi phản hồi về giao diện.
+
+Giao diện cập nhật chi tiết phương thức thanh toán của nhân viên thông qua PaymentProcessor.
+
+**Maintain Timecard:**
+
+Nhân viên nhập dữ liệu thẻ thời gian qua giao diện.
+
+Giao diện gửi yêu cầu xác thực dữ liệu thẻ thời gian đến TimecardProcessor.
+
+TimecardProcessor xác thực dữ liệu thẻ thời gian và gửi phản hồi về giao diện.
+
+Giao diện cập nhật dữ liệu thẻ thời gian của nhân viên thông qua TimecardProcessor.
 
 **-Biểu đồ lớp hợp nhất**
 
-![Diagram]
-(https://www.planttext.com/api/plantuml/png/T5113e8m4Bpt5JtgWI-O627HWyG3whdIZH1RIhRbq1XVvi4d-GMnGAKIRZkpivtfl9-lN32jQI9heIm0lHDA8mztiOCfa-26DUS8MhlvmAo4okp158gt3AN7cZC30RzOkarI6S2ib90p_78FGZhVGDoRTo2pDKnq1rHvww_GIIazCL7EUGPfOZ2i57fiFSJfNUDMx8QjQb2V5Tw0Exmf65uXRUG5S7ezbsZOjpz76oGAQ_35Hz7ghz9WDLmH7tlC-XGaB7Jqw4_o0G00__y30000)
+**Mô Tả Các Thành Phần**
+
+**Employee (Nhân viên):**
+
+**Thuộc tính:**
+
+EmployeeID: Mã số nhận diện của nhân viên.
+
+Name: Tên của nhân viên.
+
+Address: Địa chỉ của nhân viên.
+
+PaymentMethod: Phương thức thanh toán mà nhân viên chọn.
+
+**Phương thức:**
+
+SelectPaymentMethod(): Nhân viên chọn phương thức thanh toán.
+
+EnterTimecard(): Nhân viên nhập dữ liệu thẻ thời gian.
+
+**PaymentMethod (Phương thức thanh toán):**
+
+**Thuộc tính:**
+
+MethodType: Loại phương thức thanh toán (ví dụ: Chuyển khoản trực tiếp, gửi qua bưu điện).
+
+PaymentProcessor (Bộ xử lý thanh toán):
+
+**Phương thức:**
+
+ValidatePaymentMethod(): Xác thực phương thức thanh toán mà nhân viên chọn.
+
+UpdatePaymentDetails(): Cập nhật thông tin chi tiết về phương thức thanh toán của nhân viên.
+
+**Timecard (Thẻ thời gian):**
+
+**Thuộc tính:**
+
+Date: Ngày làm việc được ghi nhận.
+
+HoursWorked: Số giờ làm việc được ghi nhận.
+
+ChargeNumber: Số mã phí liên quan đến công việc.
+
+TimecardProcessor (Bộ xử lý thẻ thời gian):
+
+**Phương thức:**
+
+ValidateTimecardEntry(): Xác thực các mục nhập thẻ thời gian.
+
+UpdateTimecard(): Cập nhật thông tin thẻ thời gian của nhân viên.
+
+**Mối Quan Hệ Giữa Các Thành Phần**
+
+Employee có quan hệ với PaymentMethod: Nhân viên có thể chọn và cập nhật phương thức thanh toán của mình.
+
+Employee có quan hệ với Timecard: Nhân viên có thể nhập dữ liệu thẻ thời gian của mình.
+
+PaymentMethod liên kết với PaymentProcessor: Phương thức thanh toán được xác thực và cập nhật thông qua bộ xử lý thanh toán.
+
+Timecard liên kết với TimecardProcessor: Thẻ thời gian được xác thực và cập nhật thông qua bộ xử lý thẻ thời gian.
+
+![Diagram](https://www.planttext.com/api/plantuml/png/T5113e8m4Bpt5JtgWI-O627HWyG3whdIZH1RIhRbq1XVvi4d-GMnGAKIRZkpivtfl9-lN32jQI9heIm0lHDA8mztiOCfa-26DUS8MhlvmAo4okp158gt3AN7cZC30RzOkarI6S2ib90p_78FGZhVGDoRTo2pDKnq1rHvww_GIIazCL7EUGPfOZ2i57fiFSJfNUDMx8QjQb2V5Tw0Exmf65uXRUG5S7ezbsZOjpz76oGAQ_35Hz7ghz9WDLmH7tlC-XGaB7Jqw4_o0G00__y30000)
