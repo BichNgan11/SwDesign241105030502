@@ -312,89 +312,9 @@ status: Trạng thái của đơn đặt hàng (kiểu dữ liệu String)
 
 currentUser: Người dùng hiện tại (kiểu dữ liệu String)
 
-**5.Biểu đồ lớp phân tích **
-
-![Diagram](https://www.planttext.com/api/plantuml/png/V59BQiGm3Dtd52Ahjf2XtGwbpA8K2lt1q0DuR34rn7QGv2cXz6HTz4YzGfrC1k9CY3SsJqzFUfB_VdutB8eakhhGjMA6TqQ2hmBIgM0hPFqUOi8UJOvvvR1700x16j24Il0jalvGZAzaa2uknuJOc6M2mHeN2OIfD1xEAD_5q7iMc9e87JXreIDBS4Wl9pSLtASkZ-JkDO1FbkNsc7Ct156KhJcNIxEKoETZcPl4dFbvlsEBsvO5tTIRZaJefTjT9cgvgLNRZ-CXaClbEUwSbRb5ZD9c8y_8hFP3N_s7AMzAg2eehrUhgtAoXpKuvHETYw7vPN93GIVzHCyZfwnqzINN43uz6jYrnGQzwNxmFm000F__0m00)
-
-**6.Quan Hệ Giữa Các Lớp**
-
--User và PurchaseOrder: Người dùng quản lý đơn đặt hàng (User "1" -- "0..*" PurchaseOrder: manages).
-
--System và PurchaseOrder: Hệ thống xử lý các yêu cầu liên quan đến đơn đặt hàng (System "1" -- "0..*" PurchaseOrder: processes).
-
--PurchaseOrder và User: Đơn đặt hàng thuộc về người dùng (PurchaseOrder "1" -- "1" User: owned by).
-
-**V. Phân tích ca sử dụng Maintain Employee Information**
-
-**1.Các Lớp Phân Tích**
-
--PayrollAdministrator:
-
-Thuộc tính: name, id
-
-Phương thức: createEmployee(), updateEmployee(), deleteEmployee(), retrieveEmployee()
-
--Employee:
-
-Thuộc tính: employeeId, name, address, phone, position, salary, status
-
-Phương thức: add(), update(), delete(), retrieve()
-
--System:
-
-Thuộc tính: currentUser
-
-Phương thức: displayEmployeeForm(), submitEmployeeInfo(), displayEmployee(), displayMessage()
-
-**2.Biểu Đồ Sequence**
-
-![Diagram](https://www.planttext.com/api/plantuml/png/x5LBQiCm4Dth55ewYz9z5YKXQQ6xGka1LCy41Fguet50P-kYH-eLAbjMQXA7EA7B6ko0vxtvl3TMlZ-_Le4LSMkDK3LxaYygaZTc3LOx7PXKUYdUVUj0KPIlCJ1QWOurH_be6-CZeX1JB7dtCE2NqYhjEDs5yUnsdgnYxLsr41dLuQVoB2NXHuk1drfN3unBzKA3jTx50sD3g1ZltnheVhPea74Xb65Pzn4XqpMpZV4CgPMEUQcTf1VI1E-tOWakfGAeS0JDo18VPwszssco9RG6G3X9F3qAwD0O5JSvG_RXK1GM0ar0sVPgtIGDp1Ic8R_NW2FUk8jp4X4oQTpZ2NXAfOBPObf04wuJg2IiZh9SONlUEPZfVjQyQaz9i_TWAFYNcm3z1_E_2JTlmc1HV_3a4-pSH5dgMVCS-PvFjIjzBnsTzz-1MAL7zm_n0m00__y30000)
-
-**3.Nhiệm Vụ Của Các Lớp Phân Tích**
-
--PayrollAdministrator:
-
-Tương tác với hệ thống để tạo, cập nhật và xóa thông tin nhân viên.
-
--Employee:
-
-Lưu trữ thông tin nhân viên và thực hiện các thao tác tạo, cập nhật và xóa thông tin nhân viên.
-
--System:
-
-Quản lý giao diện và điều hướng quy trình duy trì thông tin nhân viên. Xử lý yêu cầu từ người dùng và hiển thị kết quả tương ứng.
-
-**4.Biểu đồ lớp phân tích**
+**5.Biểu đồ lớp phân tích**
 
 ![Diagram](https://www.planttext.com/api/plantuml/png/X5BBIiGm5DttAovTgT11jxCQ5mgp6106Fo1jhcCWB-vDHeBuPIxy97_1AAqs9SLkGiyvoJtd99_l7piEWa8qkXcqO8O7aSXfVIkDiee3YU08NXl8NmV7GCgUm0g39QBapp_0sIa90w48U6UyTWdnudBEHIzNEOaQrpZ2F0dFS_Qj6JrFsD8dZlXU_kTVI4d8N8B-sTc5pZjMGJaxejB5NYEmq89IgSorXiZp17b6hOfQ1VNeyyZ7n07DCl0GYT26HqOg3bNijKXJJVUEJ3c1OszKcFYzVN8BL-K1LVAG-nEdqMJr5RKtBNGTjDURpLNxTsbRCCBcdToCeLPrdjoGfsJbBpXfyrATkGNtOb52dveTMldzphy0003__mC0)
-
-**5.Thuộc tính**
-
--PayrollAdministrator:
-
-name: Tên của quản trị viên bảng lương (kiểu dữ liệu String)
-
-id: ID của quản trị viên bảng lương (kiểu dữ liệu String)
-
-Employee:
-
-employeeId: ID của nhân viên (kiểu dữ liệu String)
-
-name: Tên của nhân viên (kiểu dữ liệu String)
-
-address: Địa chỉ của nhân viên (kiểu dữ liệu String)
-
-phone: Số điện thoại của nhân viên (kiểu dữ liệu String)
-
-position: Chức vụ của nhân viên (kiểu dữ liệu String)
-
-salary: Lương của nhân viên (kiểu dữ liệu double)
-
-status: Trạng thái làm việc của nhân viên (kiểu dữ liệu String)
-
--System:
-
-currentUser: Người dùng hiện tại (kiểu dữ liệu String)
 
 **6.Quan Hệ Giữa Các Lớp**
 
