@@ -482,10 +482,10 @@ Không có thuộc tính cụ thể nào được liệt kê
                if (timecard.getEmployeeId().equals(employeeId)) {
                   System.out.println("Date: " + timecard.getDate() + ", Hours Worked: " + timecard.getHoursWorked());
             }
-        }
+         }
+      }
     }
-  }
-
+ 
          import java.util.Calendar;
          
          public class Main {
@@ -500,6 +500,6 @@ Không có thuộc tính cụ thể nào được liệt kê
 
             timecardSystem.deleteTimecard("E001", Calendar.getInstance().getTime());
             timecardSystem.retrieveTimecards("E001");
+      }
     }
-}
     
