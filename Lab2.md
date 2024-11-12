@@ -401,6 +401,7 @@ Không có thuộc tính cụ thể nào được liệt kê
 -PayrollSystem và BankSystem: Hệ thống bảng lương tương tác với hệ thống ngân hàng để xử lý các giao dịch thanh toán (PayrollSystem "1" -- "0..*" BankSystem : interacts with).
 
 **II. Viết code java mô phỏng ca sử dụng Maintain Timecard**
+
       public class Emloyee {
           private String employeeId;
           private String name;
