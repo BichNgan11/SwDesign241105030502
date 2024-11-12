@@ -441,5 +441,64 @@ Không có thuộc tính cụ thể nào được liệt kê
               return hoursWorked;
        }
     }
-   
+       import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class TimecardSystem {
+    private List<Timecard> timecards;
+
+    public TimecardSystem() {
+        this.timecards = new ArrayList<>();
+    }
+
+    public void addTimecard(String employeeId, Date date, int hoursWorked) {
+        Timecard timecard = new Timecard(employeeId, date, hoursWorked);
+        timecards.add(timecard);
+        System.out.println("Timecard added for employee: " + employeeId);
+    }
+
+    public void updateTimecard(String employeeId, Date date, int hoursWorked) {
+        for (Timecard timecard : timecards) {
+            if (timecard.getEmployeeId().equals(employeeId) && timecard.getDate().equals(date)) {
+                timecards.remove(timecard);
+                timecard = new Timecard(employeeId, date, hoursWorked);
+                timecards.add(timecard);
+                System.out.println("Timecard updated for employee: " + employeeId);
+                return;
+            }
+        }
+        System.out.println("Timecard not found for employee: " + employeeId);
+    }
+
+    public void deleteTimecard(String employeeId, Date date) {
+        timecards.removeIf(timecard -> timecard.getEmployeeId().equals(employeeId) && timecard.getDate().equals(date));
+        System.out.println("Timecard deleted for employee: " + employeeId);
+    }
+
+    public void retrieveTimecards(String employeeId) {
+        System.out.println("Timecards for employee: " + employeeId);
+        for (Timecard timecard : timecards) {
+            if (timecard.getEmployeeId().equals(employeeId)) {
+                System.out.println("Date: " + timecard.getDate() + ", Hours Worked: " + timecard.getHoursWorked());
+            }
+        }
+    }
+}
+import java.util.Calendar;
+
+public class Main {
+    public static void main(String[] args) {
+        TimecardSystem timecardSystem = new TimecardSystem();
+
+        timecardSystem.addTimecard("E001", Calendar.getInstance().getTime(), 8);
+
+        timecardSystem.updateTimecard("E001", Calendar.getInstance().getTime(), 9);
+
+        timecardSystem.retrieveTimecards("E001");
+
+        timecardSystem.deleteTimecard("E001", Calendar.getInstance().getTime());
+        timecardSystem.retrieveTimecards("E001");
+    }
+}
     
