@@ -399,3 +399,46 @@ Không có thuộc tính cụ thể nào được liệt kê
 -PayrollSystem và Employee: Hệ thống bảng lương truy xuất thông tin từ các đối tượng nhân viên (PayrollSystem "1" -- "0..*" Employee : retrieves).
 
 -PayrollSystem và BankSystem: Hệ thống bảng lương tương tác với hệ thống ngân hàng để xử lý các giao dịch thanh toán (PayrollSystem "1" -- "0..*" BankSystem : interacts with).
+
+**II. Viết code java mô phỏng ca sử dụng Maintain Timecard**
+      public class Emloyee {
+          private String employeeId;
+          private String name;
+
+          public Emloyee(String employeeId, String name) {
+              this.employeeId = employeeId;
+              this.name = name;
+         }
+
+          public String getEmployeeId(){
+              return employeeId;
+         }
+
+         public String getName(){
+              return name;
+         }
+      }
+      import java.util.Date;
+
+      public class Timecard{
+          private String employeeId;
+          private Data date;
+          private int hoursWorked;
+
+          public Timecard(String employeeId, Data date, int hoursWorked) {
+              this.employeeId = employeeId;
+              this.date = date;
+              this.hoursWorked;
+       }
+          public String getEmployeeId() {
+              return employeeId;
+       }
+          public Date getDate(){
+              return date;
+       }
+          public int getHoursWorked(){
+              return hoursWorked;
+       }
+   }
+   
+    
